@@ -35,13 +35,12 @@ recErr_Results = imfilter(recErr_Results,fspecial('average', 5),'replicate');
 colormap(jet);
 %colormap(spring);
 
-subplot(3,3,1); imshow(imread('image.jpg')); title('image'); axis image; axis off; colorbar; 
-subplot(3,3,2); imagesc(votes_Results); title('votes'); axis image; axis off; colorbar;
-%subplot(3,3,3); imagesc(normC_Results); title('normalised corr.'); axis image; axis off; colorbar;
-subplot(3,3,4); imagesc(normC_ResultsBinned); title('normalised corr. binned'); axis image; axis off; colorbar;
-subplot(3,3,5); imagesc(normCMax_Results); title('normalised corr. max'); axis image; axis off; colorbar;
-subplot(3,3,6); imagesc(normCMaxBinned_Results); title('normalised corr. max binned'); axis image; axis off; colorbar;
-subplot(3,3,7); imagesc(recErrAccBinned_Results); title('rec. error binned'); axis image; axis off; colorbar;
-subplot(3,3,8); imagesc(recErrMin_Results); title('rec. error min'); axis image; axis off; colorbar;
-subplot(3,3,9); imagesc(recErrMinBinned_Results); title('rec. error min binned'); axis image; axis off; colorbar;
+subplot(3,2,1); imshow(imread('image.jpg')); title('image'); axis image; axis off; colorbar; 
+subplot(3,2,2); imagesc(votes_Results); title('votes'); axis image; axis off; colorbar;
+subplot(3,2,3); imagesc(normCMax_Results); title('normalised corr. max'); axis image; axis off; colorbar;
+subplot(3,2,4); imagesc(normC_ResultsBinned); title('normalised corr.'); axis image; axis off; colorbar;
+%subplot(3,3,6); imagesc(normCMaxBinned_Results); title('normalised corr. max binned'); axis image; axis off; colorbar;
+subplot(3,2,5); imagesc(recErrMin_Results); title('rec. error min'); axis image; axis off; colorbar;
+subplot(3,2,6); imagesc(recErrAccBinned_Results); title('rec. error'); axis image; axis off; colorbar;
+%subplot(3,2,9); imagesc(recErrMinBinned_Results); title('rec. error min binned'); axis image; axis off; colorbar;
 
