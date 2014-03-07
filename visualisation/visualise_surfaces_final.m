@@ -35,7 +35,8 @@ recErr_Results = imfilter(recErr_Results,fspecial('average', 5),'replicate');
 colormap(jet);
 %colormap(spring);
 
-subplot(2,2,1); imshow(imread('image.jpg')); title('image'); axis image; axis off; colorbar;
+if 0
+subplot(2,2,1); imshow(imread('image.png')); title('image'); axis image; axis off; colorbar;
 text(0.45,-0.02,'a)','Units', 'Normalized', 'VerticalAlignment', 'Top')
 subplot(2,2,2); imagesc(votes_Results); title('votes'); axis image; axis off; colorbar;
 text(0.45,-0.02,'b)','Units', 'Normalized', 'VerticalAlignment', 'Top')
@@ -43,8 +44,6 @@ subplot(2,2,3); imagesc(normCMax_Results); title('normalised corr. max'); axis i
 text(0.45,-0.02,'c)','Units', 'Normalized', 'VerticalAlignment', 'Top')
 subplot(2,2,4); imagesc(normC_ResultsBinned); title('normalised corr.'); axis image; axis off; colorbar;
 text(0.45,-0.02,'d)','Units', 'Normalized', 'VerticalAlignment', 'Top')
-%subplot(3,3,6); imagesc(normCMaxBinned_Results); title('normalised corr. max binned'); axis image; axis off; colorbar;
-%subplot(3,2,5); imagesc(recErrMin_Results); title('rec. error min'); axis image; axis off; colorbar;
-%subplot(3,2,6); imagesc(recErrAccBinned_Results); title('rec. error'); axis image; axis off; colorbar;
-%subplot(3,2,9); imagesc(recErrMinBinned_Results); title('rec. error min binned'); axis image; axis off; colorbar;
+end
+imagesc(votes_Results); axis image; axis off; colorbar;
 
