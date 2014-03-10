@@ -27,9 +27,9 @@ max_error = max(max(recErrAccBinned_Results(find(recErrAccBinned_Results < 10000
 recErrAccBinned_Results(find(recErrAccBinned_Results >= 1000000)) = max_error;
 
 %blur error surfaces
-normCMax_Results = imfilter(normCMax_Results,fspecial('average', 5),'replicate');
-recErrMin_Results = imfilter(recErrMin_Results,fspecial('average', 5),'replicate');
-recErr_Results = imfilter(recErr_Results,fspecial('average', 5),'replicate');
+%normCMax_Results = imfilter(normCMax_Results,fspecial('average', 5),'replicate');
+%recErrMin_Results = imfilter(recErrMin_Results,fspecial('average', 5),'replicate');
+%recErr_Results = imfilter(recErr_Results,fspecial('average', 5),'replicate');
 
 %colormap(flipud(gray));
 colormap(jet);
